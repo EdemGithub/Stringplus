@@ -1,5 +1,3 @@
-.PHONY: all clean test s21_string.a gcov_report
-
 COVERAGE= #--coverage
 ASAN= #-fsanitize=address
 CC= gcc #-g
