@@ -2,6 +2,8 @@
 
 Implementation of the string.h library with additions.
 
+This project developed its own implementation of the string.h library in the C programming language with some additions (with its own implementation of the sprintf function and some functions for processing strings from the C# language).
+
 
 ### string.h Functions
 
