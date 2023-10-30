@@ -1,6 +1,3 @@
-Я ЕСТЬ ТУТУТУТУТУТУТ
-
-
 # String+
 
 Implementation of the string.h library with additions.
@@ -72,5 +69,8 @@ This project developed its own implementation of the string.h library in the C p
 | 2 | void *to_lower(const char *str) | Returns a copy of string (str) converted to lowercase. In case of any error, return NULL |
 | 3 | void *insert(const char *src, const char *str, size_t start_index) | Returns a new string in which a specified string (str) is inserted at a specified index position (start_index) in the given string (src). In case of any error, return NULL |
 | 4 | void *trim(const char *src, const char *trim_chars) | Returns a new string in which all leading and trailing occurrences of a set of specified characters (trim_chars) from the given string (src) are removed. In case of any error, return NULL |
+
+
+Гатоваа!!
 
 
