@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
+      - name: Run command on remote server
+        uses: D3rHase/ssh-command-action@v0.2.2
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-      - name: Deploy with rsync
-        run: rsync -avz /home/runner/work/String_lib/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/test/
+          host: ${{secrets.SSH_HOST}}
+          user: ${{secrets.SSH_USER}}
+          private_key: ${{secrets.SSH_PRIVATE_KEY}}
+          command: |
+            cd ${{ secrets.PROJECT_FOLDER }};
+            git checkout main;
+            git pull;
